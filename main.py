@@ -91,7 +91,7 @@ def pick_best_blog(blogs, topic):
     for i, blog in enumerate(blogs):
         user_prompt += f"\n\n<blog-{i+1}>\n{blog}\n</blog-{i+1}>\n\n"
     with yaspin(text="Selecting the best blog post...") as sp:
-        best_blog = writer_bot.chat([
+        best_blog = outline_bot.chat([
             {
                 "role": "system",
                 "content": best_blog_prompt
