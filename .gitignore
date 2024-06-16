@@ -1,0 +1,11 @@
+.env
+__pycache__*
+autogen.*
+.env.*
+report_*
+applicants/*
+criteria/*
+.DS*
+venv*
+combined_questions.md
+
