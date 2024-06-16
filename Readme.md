@@ -22,8 +22,8 @@ This project is a Python script designed to create blog posts on a given topic u
 1. **Clone the repository:**
 
     ```bash
-    git clone <repository-url>
-    cd <repository-directory>
+    git clone https://github.com/ohnotnow/copywrite_pipeline_experiment.git
+    cd copywrite_pipeline_experiment
     ```
 
 2. **Create a virtual environment and activate it:**
