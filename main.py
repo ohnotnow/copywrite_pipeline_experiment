@@ -136,13 +136,14 @@ def main():
     end = time.time()
     print(f"- Total time: {end - start} seconds")
     print("- Total cost : ", total_cost)
-    print("### Best blog post:")
+    print("### Best blog post")
     print(best_blog)
     topic = topic.replace(" ", "-")
     topic = "".join([c if c.isalnum() else "-" for c in topic])
     with open(f"{today_string}_{topic}.md", "w") as f:
         f.write(best_blog)
-    print("\n\n### Reasoning: ", reasoning)
+    print("\n\n### Reasoning")
+    print(reasoning)
 
 if __name__ == "__main__":
     main()
