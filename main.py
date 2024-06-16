@@ -59,7 +59,6 @@ def generate_blog_post(topic, number=1):
             }
         ])
         sp.ok("✅")
-    print("Generating blog post...")
     with yaspin(text=f"Generating blog post #{number}...") as sp:
         blog_post = writer_bot.chat([
             {
@@ -72,7 +71,6 @@ def generate_blog_post(topic, number=1):
             }
         ])
         sp.ok("✅")
-    print("Fine-tuning blog post...")
     with yaspin(text=f"Fine-tuning blog post #{number}...") as sp:
         fineTuned_blog_post = fineTune_bot.chat([
             {
@@ -136,16 +134,15 @@ def main():
         best_blog = blogs[0]
         reasoning = "Only one blog post generated"
     end = time.time()
-    print(f"Total time: {end - start} seconds")
-    print("Total cost : ", total_cost)
-    print("Best blog post:")
+    print(f"- Total time: {end - start} seconds")
+    print("- Total cost : ", total_cost)
+    print("### Best blog post:")
     print(best_blog)
     topic = topic.replace(" ", "-")
     topic = "".join([c if c.isalnum() else "-" for c in topic])
     with open(f"{today_string}_{topic}.md", "w") as f:
         f.write(best_blog)
-    print(best_blog)
-    print("\n\nReasoning: ", reasoning)
+    print("\n\n### Reasoning: ", reasoning)
 
 if __name__ == "__main__":
     main()
